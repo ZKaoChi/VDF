@@ -89,22 +89,15 @@
       font-weight: normal;
     }
 
-    .highlight-box {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 2rem;
-      border-radius: 10px;
-      margin: 2rem 0;
-    }
-
-    .highlight-number {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-
-    .highlight-text {
-      font-size: 1.2rem;
+    .figure-caption {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #555;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
@@ -121,13 +114,13 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block">Rui-qing Sun<sup>1</sup>,</span>
             <span class="author-block">Xingshan Yao<sup>1</sup>,</span>
-            <span class="author-block">Tian Lan<sup>1</sup>,</span>
+            <span class="author-block">Tian Lan<sup>2</sup>,</span>
             <span class="author-block">Jia-Ling Shi<sup>1</sup>,</span>
             <span class="author-block">Chen-Hao Cui<sup>1</sup>,</span>
             <span class="author-block">Hui-Yang Zhao<sup>1</sup>,</span>
-            <span class="author-block">Zhijing Wu<sup>2</sup>,</span>
-            <span class="author-block">Chen Yang<sup>2</sup>,</span>
-            <span class="author-block">Xian-Ling Mao<sup>1</sup></span>
+            <span class="author-block">Zhijing Wu<sup>1</sup>,</span>
+            <span class="author-block">Chen Yang<sup>1,*</sup>,</span>
+            <span class="author-block">Xian-Ling Mao<sup>1,*</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -168,45 +161,21 @@
   </div>
 </section>
 
-<!-- Key Highlight -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="highlight-box has-text-centered">
-          <div class="highlight-number">47×</div>
-          <div class="highlight-text">Acceleration over fastest baseline</div>
-          <div class="highlight-text" style="margin-top: 1rem; font-size: 1rem;">
-            while maintaining high-fidelity video quality
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Video Demonstration -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Video Demonstration</h2>
       <div class="columns is-centered">
-        <div class="column is-half">
+        <div class="column is-two-thirds">
           <div class="item">
-            <h3 class="subtitle is-5">Input Video</h3>
-            <video controls>
-              <source src="src/video/input.mp4" type="video/mp4">
+            <video controls style="width: 100%; max-width: 800px; margin: 0 auto;">
+              <source src="src/video/demo.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-          </div>
-        </div>
-        <div class="column is-half">
-          <div class="item">
-            <h3 class="subtitle is-5">Defended Video (Our Method)</h3>
-            <video controls>
-              <source src="src/video/output.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <div class="figure-caption" style="margin-top: 1rem;">
+              Demonstration of our video defense framework. The video shows the effectiveness of our method in protecting portrait videos while maintaining visual quality.
+            </div>
           </div>
         </div>
       </div>
@@ -223,10 +192,9 @@
         <div class="column is-four-fifths">
           <div class="item">
             <img src="src/image/framework.png" alt="VDF Framework Architecture" style="width: 100%; max-width: 900px;">
-            <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">
-              Our proposed video defense framework introduces (1) similarity-guided parameter sharing for efficiency, 
-              and (2) multi-scale dual-domain attention module for joint spatial-frequency optimization.
-            </h3>
+            <div class="figure-caption">
+              Overall architecture of the proposed framework. (a) Efficiency improvement mechanism. (b) Dual-domain attention mechanism with multiscale module.
+            </div>
           </div>
         </div>
       </div>
@@ -259,49 +227,6 @@
             fidelity. Moreover, it remains robust against scaling operations and state-of-the-art purification attacks, 
             and the effectiveness of our design choices is further validated through ablation studies.
           </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Key Features -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Key Contributions</h2>
-      <div class="columns is-centered">
-        <div class="column is-three-quarters">
-          <div class="content">
-            <div class="columns">
-              <div class="column">
-                <div class="box">
-                  <h4 class="title is-5"><i class="fas fa-bolt"></i> High Efficiency</h4>
-                  <p>47× faster than the fastest baseline with similarity-guided parameter sharing</p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="box">
-                  <h4 class="title is-5"><i class="fas fa-shield-alt"></i> Strong Defense</h4>
-                  <p>Effective protection against 3D-field TFG methods with high success rate</p>
-                </div>
-              </div>
-            </div>
-            <div class="columns">
-              <div class="column">
-                <div class="box">
-                  <h4 class="title is-5"><i class="fas fa-video"></i> High Fidelity</h4>
-                  <p>Maintains video quality while providing robust defense</p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="box">
-                  <h4 class="title is-5"><i class="fas fa-cogs"></i> Dual-domain Optimization</h4>
-                  <p>Multi-scale spatial-frequency perturbation for comprehensive protection</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -352,13 +277,6 @@
           scrollTop: target.offset().top
         }, 1000);
       }
-    });
-
-    // Video play/pause synchronization (optional)
-    $('video').on('play', function() {
-      $('video').not(this).each(function() {
-        this.pause();
-      });
     });
   });
 </script>
