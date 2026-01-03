@@ -27,6 +27,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   
   <style>
+    body {
+      background-color: #ffffff;
+    }
+
     .container {
       text-align: center;
     }
@@ -99,6 +103,18 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    .hero {
+      background-color: #ffffff;
+    }
+
+    .hero.is-light {
+      background-color: #f8f9fa;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+    }
   </style>
 </head>
 <body>
@@ -128,6 +144,10 @@
               <sup>1</sup>Beijing Institute of Technology, 
               <sup>2</sup>Alibaba International Digital Commerce
             </span>
+            <br>
+            <span class="author-block" style="color: #666; margin-top: 0.5rem; display: inline-block;">
+              * Corresponding Authors
+            </span>
           </div>
 
           <div class="column has-text-centered">
@@ -135,7 +155,7 @@
               <!-- Paper PDF Link -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2512.21019" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
@@ -146,7 +166,7 @@
               <!-- Github link -->
               <span class="link-block">
                 <a href="https://github.com/Richen7418/VDF" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
@@ -169,11 +189,11 @@
       <div class="columns is-centered">
         <div class="column is-two-thirds">
           <div class="item">
-            <video controls style="width: 100%; max-width: 800px; margin: 0 auto;">
+            <video controls style="width: 100%; max-width: 800px; margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
               <source src="src/video/demo.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <div class="figure-caption" style="margin-top: 1rem;">
+            <div class="figure-caption" style="margin-top: 1.5rem;">
               Demonstration of our video defense framework. The video shows the effectiveness of our method in protecting portrait videos while maintaining visual quality.
             </div>
           </div>
@@ -183,27 +203,8 @@
   </div>
 </section>
 
-<!-- Framework Overview -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Framework Overview</h2>
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="item">
-            <img src="src/image/framework.png" alt="VDF Framework Architecture" style="width: 100%; max-width: 900px;">
-            <div class="figure-caption">
-              Overall architecture of the proposed framework. (a) Efficiency improvement mechanism. (b) Dual-domain attention mechanism with multiscale module.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Abstract -->
-<section class="section hero">
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -233,11 +234,30 @@
   </div>
 </section>
 
+<!-- Framework Overview -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Framework Overview</h2>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="item">
+            <img src="src/image/framework.png" alt="VDF Framework Architecture" style="width: 100%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div class="figure-caption" style="margin-top: 1.5rem;">
+              Overall architecture of the proposed framework. (a) Efficiency improvement mechanism. (b) Dual-domain attention mechanism with multiscale module.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BibTeX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+    <pre style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; overflow-x: auto; border: 1px solid #e9ecef;">
 @article{sun2024efficient,
   title={Efficient and Robust Video Defense Framework against 3D-field Personalized Talking Face},
   author={Sun, Rui-qing and Yao, Xingshan and Lan, Tian and Shi, Jia-Ling and Cui, Chen-Hao and Zhao, Hui-Yang and Wu, Zhijing and Yang, Chen and Mao, Xian-Ling},
@@ -256,7 +276,7 @@
             This project is available at: 
             <a href="https://github.com/Richen7418/VDF" target="_blank">https://github.com/Richen7418/VDF</a>
           </p>
-          <p style="margin-top: 1rem;">
+          <p style="margin-top: 1rem; color: #666;">
             © 2024 Video Defense Framework (VDF) | Beijing Institute of Technology & Alibaba
           </p>
         </div>
