@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <!-- Meta tags for social media banners -->
   <meta name="description" content="Efficient and Robust Video Defense Framework against 3D-field Personalized Talking Face">
   <meta property="og:title" content="Efficient and Robust Video Defense Framework against 3D-field Personalized Talking Face"/>
   <meta property="og:description" content="A novel and efficient video defense framework protecting portrait videos against 3D-field talking face generation methods"/>
@@ -26,6 +27,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   
   <style>
+    .container {
+      text-align: center;
+    }
+
+    .item {
+      display: inline-block;
+      margin: auto;
+    }
+
     .item video {
       width: 100%;
       max-width: 800px;
@@ -36,6 +46,47 @@
       font-size: 2.2rem;
       line-height: 1.2;
       margin-bottom: 1rem;
+    }
+
+    .author-block {
+      margin-right: 0.5rem;
+    }
+
+    .link-block {
+      margin: 0.5rem;
+    }
+
+    .section {
+      padding: 3rem 1.5rem;
+    }
+
+    .hero.is-small .hero-body {
+      padding: 2rem 1.5rem;
+    }
+
+    .results-carousel {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 1rem 0;
+    }
+
+    .results-carousel .item {
+      display: inline-block;
+      vertical-align: top;
+      white-space: normal;
+      margin-right: 2rem;
+    }
+
+    .publication-video iframe {
+      width: 100%;
+      height: 500px;
+      max-width: 900px;
+    }
+
+    .small-text {
+      font-size: 0.9rem;
+      color: #666;
+      font-weight: normal;
     }
 
     .figure-caption {
@@ -81,6 +132,7 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
+              <!-- Paper PDF Link -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2512.21019" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
@@ -91,6 +143,7 @@
                 </a>
               </span>
 
+              <!-- Github link -->
               <span class="link-block">
                 <a href="https://github.com/Richen7418/VDF" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
@@ -109,18 +162,20 @@
 </section>
 
 <!-- Video Demonstration -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Video Demonstration</h2>
-    <div class="columns is-centered">
-      <div class="column is-two-thirds">
-        <div class="has-text-centered">
-          <video controls style="width: 100%; max-width: 800px; margin: 0 auto;">
-            <source src="src/video/demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="figure-caption">
-            Demonstration of our video defense framework. The video shows the effectiveness of our method in protecting portrait videos while maintaining visual quality.
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Demonstration</h2>
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <div class="item">
+            <video controls style="width: 100%; max-width: 800px; margin: 0 auto;">
+              <source src="src/video/demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="figure-caption" style="margin-top: 1rem;">
+              Demonstration of our video defense framework. The video shows the effectiveness of our method in protecting portrait videos while maintaining visual quality.
+            </div>
           </div>
         </div>
       </div>
@@ -129,7 +184,7 @@
 </section>
 
 <!-- Abstract -->
-<section class="section">
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -160,15 +215,17 @@
 </section>
 
 <!-- Framework Overview -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Framework Overview</h2>
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="has-text-centered">
-          <img src="src/image/framework.png" alt="VDF Framework Architecture" style="width: 100%; max-width: 900px;">
-          <div class="figure-caption">
-            Overall architecture of the proposed framework. (a) Efficiency improvement mechanism. (b) Dual-domain attention mechanism with multiscale module.
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Framework Overview</h2>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="item">
+            <img src="src/image/framework.png" alt="VDF Framework Architecture" style="width: 100%; max-width: 900px;">
+            <div class="figure-caption">
+              Overall architecture of the proposed framework. (a) Efficiency improvement mechanism. (b) Dual-domain attention mechanism with multiscale module.
+            </div>
           </div>
         </div>
       </div>
@@ -207,6 +264,22 @@
     </div>
   </div>
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Smooth scrolling for anchor links
+    $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top
+        }, 1000);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
